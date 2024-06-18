@@ -92,26 +92,4 @@ class LDAP_OP(object):
             return x
         except Exception as e:
             return False
-'''
-ldapop = LDAP_OP()
-conn_result = ldapop.conn_res()
 
-print(conn_result)
-print(ldapop.reset_passwd(conn_result, "jasondu", "123qweASD"))
-
-conn_result = ldapop.conn_res()
-search_user_res = ldapop.search_user(conn_result, "jasondu")
-print(search_user_res.get("distinguishedName"))
-print(search_user_res.get("pwdLastSet"))
-'''
-
-'''
-ldapop = LDAP_OP()
-conn_result = ldapop.conn_res()
-print(conn_result)
-print(ldapop.search_user(conn_result, "jasondu"))
-'''
-
-ldapop = LDAP_OP()
-authenticate_result = ldapop.authenticate("jasondu", "123qweASD")
-print(authenticate_result)
